@@ -31,7 +31,7 @@ For Each objItem in colItems
 	logMessage = logMessage &  objItem.Threads & sep
 	logMessage = logMessage &  objItem.SystemCallsPerSec & sep 
 	logMessage = logMessage &  objItem.Processes & sep 
-	logMessage = logMessage &  objItem.ContextSwitchesPersec & sep
+	logMessage = logMessage &  objItem.ContextSwitchesPersec
 	WScript.Echo logMessage
 	
 Next
