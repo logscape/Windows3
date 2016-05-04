@@ -28,8 +28,10 @@ For Each objItem in colItems
 	logMessage = formatDate(Now()) & sep 
 	logMessage = logMessage &  objItem.Name & sep 
 	logMessage = logMessage &  objItem.ProcessorQueueLength & sep 
-	logMessage = logMessage &  objItem.Threads 
+	logMessage = logMessage &  objItem.Threads & sep
 	logMessage = logMessage &  objItem.SystemCallsPerSec & sep 
+	logMessage = logMessage &  objItem.Processes & sep 
+	logMessage = logMessage &  objItem.ContextSwitchesPersec & sep
 	WScript.Echo logMessage
 	
 Next
