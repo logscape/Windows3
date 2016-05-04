@@ -14,7 +14,7 @@ Function formatDate(dt)
 	dd=pad(Day(dt))
 	mth=pad(Month(dt))
 	YY=Year(dt)
-	formatDate=dd&"/"&mth&"/"&YY&" "&hh&":"&mm&":"&ss
+	formatDate=YY&"/"&mth&"/"&dd&" "&hh&":"&mm&":"&ss
 End Function
 
 strComputer = "."
@@ -25,11 +25,13 @@ logMessage = ""
 sep = "," 
 For Each objItem in colItems
 	REM logMessage = FormatDateTime(Now(),2) & " " & FormatDateTime(Now(),4)  & sep 
-	logMessage = formateDate(Now()) & sep 
+	logMessage = formatDate(Now()) & sep 
 	logMessage = logMessage &  objItem.Name & sep 
 	logMessage = logMessage &  objItem.ProcessorQueueLength & sep 
-	logMessage = logMessage &  objItem.Threads 
+	logMessage = logMessage &  objItem.Threads & sep
 	logMessage = logMessage &  objItem.SystemCallsPerSec & sep 
+	logMessage = logMessage &  objItem.Processes & sep 
+	logMessage = logMessage &  objItem.ContextSwitchesPersec
 	WScript.Echo logMessage
 	
 Next
