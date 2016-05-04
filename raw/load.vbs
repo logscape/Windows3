@@ -25,7 +25,7 @@ logMessage = ""
 sep = "," 
 For Each objItem in colItems
 	REM logMessage = FormatDateTime(Now(),2) & " " & FormatDateTime(Now(),4)  & sep 
-	logMessage = formateDate(Now()) & sep 
+	logMessage = formatDate(Now()) & sep 
 	logMessage = logMessage &  objItem.Name & sep 
 	logMessage = logMessage &  objItem.ProcessorQueueLength & sep 
 	logMessage = logMessage &  objItem.Threads 
