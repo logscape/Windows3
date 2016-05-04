@@ -20,7 +20,7 @@ Function formatDate(dt)
 	dd=pad(Day(dt))
 	mth=pad(Month(dt))
 	YY=Year(dt)
-	formatDate=dd&"/"&mth&"/"&YY&" "&hh&":"&mm&":"&ss
+	formatDate=YY&"/"&mth&"/"&dd&" "&hh&":"&mm&":"&ss
 End Function
 
 sub getSamples(count)
