@@ -1,11 +1,11 @@
-#WindowsApp-1.4
+#WindowsApp-1.5
 ##This version is for Logscape version 3.11 onwards
 
 The Logscape App for Windows helps you monitor, search and visualize the health of your Windows  servers. Charts report on system load, memory, network bandwidth and disk performance. 
 
 ## Downloads 
 
- * [WindowsApp-1.4.zip](https://github.com/logscape/Windows3/blob/master/dist/WindowsApp-1.4.zip?raw=true)	
+ * [WindowsApp-1.5.zip](https://github.com/logscape/Windows3/blob/master/dist/WindowsApp-1.5.zip?raw=true)	
 
 ## Quick Start
 
