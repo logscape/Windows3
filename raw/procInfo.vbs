@@ -27,6 +27,15 @@ For Each objItem in colItems
 	logMessage = FormatDateTime(Now(),2) & " " & FormatDateTime(Now(),4)  & sep 
 	logMessage = formatDate(Now()) & sep
 	logMessage = logMessage &  objItem.ProcessId & sep 
-	logMessage = logMessage &  objItem.CommandLine  
+	logMessage = logMessage &  objItem.CommandLine & sep 
+	logMessage = logMessage &  objItem.Name & sep 
+	logMessage = logMessage &  objItem.Priority & sep 
+	Return = objItem.GetOwner(strNameOfUser)
+	If Return <> 0 Then
+		logMessage = logMessage & "SYSTEM"
+    Else 
+    	logMessage = logMessage & strNameOfUser
+    End If
+    
 	WScript.Echo logMessage
 Next
