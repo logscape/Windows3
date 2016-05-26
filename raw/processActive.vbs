@@ -48,7 +48,6 @@ Function getPropertiesFromArguments()
 End Function
 
 
-
 Function filterProcessName(excludes,code)
 	Dim res
 	res=0
@@ -237,18 +236,37 @@ For Each processId In TimeStamp1.Keys
 
 		procName=ProcessName.Item(processId)
 
-		WSCript.Echo timestamp & sep & host _
-		& sep & ProcessName.Item(processId) _
-		& sep & processId _
-		& sep & ProcessOwner.Item(processId) _
-		& sep & ProcPct _
-		& sep & MemPct _
-		& sep & ProcessPriority.Item(processId) _
-		& sep & ProcessThreadCount.Item(processId) _
-		& sep & ProcessHandleCount.Item(processId) _
-		& sep & ProcessIORead.Item(processId) _
-		& sep & ProcessIOWrite.Item(processId) _
-		& sep & ProcessCmdLine.Item(processId)
+
+		if ((ProcPct > 0.05) Or (ProcessIORead.Item(processId) > 0) Or (ProcessIOWrite.Item(processId) > 0)) Then 
+			WSCript.Echo timestamp & sep & host _
+			& sep & ProcessName.Item(processId) _
+			& sep & processId _
+			& sep & ProcessOwner.Item(processId) _
+			& sep & ProcPct _
+			& sep & MemPct _
+			& sep & ProcessPriority.Item(processId) _
+			& sep & ProcessThreadCount.Item(processId) _
+			& sep & ProcessHandleCount.Item(processId) _
+			& sep & ProcessIORead.Item(processId) _
+			& sep & ProcessIOWrite.Item(processId) _
+			& sep & ProcessCmdLine.Item(processId)
+
+		elseif filterProcessName(doNotFilter,procName)	> 0 Then
+			WSCript.Echo timestamp & sep & host _
+			& sep & ProcessName.Item(processId) _
+			& sep & processId _
+			& sep & ProcessOwner.Item(processId) _
+			& sep & ProcPct _
+			& sep & MemPct _
+			& sep & ProcessPriority.Item(processId) _
+			& sep & ProcessThreadCount.Item(processId) _
+			& sep & ProcessHandleCount.Item(processId) _
+			& sep & ProcessIORead.Item(processId) _
+			& sep & ProcessIOWrite.Item(processId) _
+			& sep & ProcessCmdLine.Item(processId)
+		else
+
+		End If
 
 	End If
 	
