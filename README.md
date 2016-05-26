@@ -18,6 +18,8 @@ The Logscape App for Windows helps you monitor, search and visualize the health 
 3. Once both are uploaded, press DEPLOY on WindowsApp-1.0.zip (the application, not the override file).
 4. The Windows Application is now ready to use and can be selected opening the "Windows Home" Workspace 
 
+If you are upgrading a previous version, please see the UpgreadeReadme.MD file for some important changes. 
+
 
 # Overview 
 
