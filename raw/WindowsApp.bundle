@@ -184,7 +184,7 @@
       <script>perfProc.vbs</script>
     </Service-->
 
-    < Service>
+    <Service>
       <name>Win_Processes</name>
       <resourceSelection>osName contains WINDOWS AND osName notContainsAny '2003,XP'</resourceSelection>
       <fork>false</fork>
