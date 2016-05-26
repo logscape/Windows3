@@ -236,6 +236,7 @@ For Each processId In TimeStamp1.Keys
 
 		procName=ProcessName.Item(processId)
 
+REM Delete REM in the two lines below to add command line back in
 
 		if ((ProcPct > 0.05) Or (ProcessIORead.Item(processId) > 0) Or (ProcessIOWrite.Item(processId) > 0)) Then 
 			WSCript.Echo timestamp & sep & host _
@@ -249,7 +250,7 @@ For Each processId In TimeStamp1.Keys
 			& sep & ProcessHandleCount.Item(processId) _
 			& sep & ProcessIORead.Item(processId) _
 			& sep & ProcessIOWrite.Item(processId) _
-			& sep & ProcessCmdLine.Item(processId)
+REM			& sep & ProcessCmdLine.Item(processId)
 
 		elseif filterProcessName(doNotFilter,procName)	> 0 Then
 			WSCript.Echo timestamp & sep & host _
@@ -263,7 +264,7 @@ For Each processId In TimeStamp1.Keys
 			& sep & ProcessHandleCount.Item(processId) _
 			& sep & ProcessIORead.Item(processId) _
 			& sep & ProcessIOWrite.Item(processId) _
-			& sep & ProcessCmdLine.Item(processId)
+REM			& sep & ProcessCmdLine.Item(processId)
 		else
 
 		End If

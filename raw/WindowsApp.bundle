@@ -3,7 +3,6 @@
   <owner>info@logscape.com</owner>
   <services>
     <!-- osName contains WINDOWS 2003-->
-
     <Service>
       <name>Win_SysEvt2k3</name>
       <resourceSelection>osName contains WINDOWS and osName containsAny '2003,XP'</resourceSelection>
@@ -173,7 +172,7 @@
       <pauseSeconds>60</pauseSeconds>
       <script>listProcesses2k3.vbs</script>
     </Service>
-    <!-- Deprecated Process Service - subsequents relgated to 2003 only -->
+
     <!-- Service>
       <name>Win_ProcPerf</name>
       <resourceSelection>osName contains WINDOWS AND osName containsAny '2003,XP'</resourceSelection>
@@ -186,7 +185,7 @@
 
     <Service>
       <name>Win_Processes</name>
-      <resourceSelection>osName contains WINDOWS AND osName notContainsAny '2003,XP'</resourceSelection>
+      <resourceSelection>osName contains WINDOWS AND osName ContainsAny '2003,XP'</resourceSelection>
       <fork>false</fork>
       <background>true</background>
       <instanceCount>-1</instanceCount>
