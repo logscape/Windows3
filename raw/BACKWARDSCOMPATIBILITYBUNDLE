@@ -173,7 +173,7 @@
       <script>listProcesses2k3.vbs</script>
     </Service>
 
-    <!-- Service>
+    <Service>
       <name>Win_ProcPerf</name>
       <resourceSelection>osName contains WINDOWS AND osName containsAny '2003,XP'</resourceSelection>
       <fork>false</fork>
@@ -185,7 +185,7 @@
 
     <Service>
       <name>Win_Processes</name>
-      <resourceSelection>osName contains WINDOWS AND osName ContainsAny '2003,XP'</resourceSelection>
+      <resourceSelection>osName contains WINDOWS</resourceSelection>
       <fork>false</fork>
       <background>true</background>
       <instanceCount>-1</instanceCount>
@@ -195,7 +195,7 @@
 
     <Service>
       <name>Win_ProcInfo</name>
-      <resourceSelection>osName contains WINDOWS AND osName containsAny '2003,XP'</resourceSelection>
+      <resourceSelection>osName contains WINDOWS</resourceSelection>
       <fork>false</fork>
       <background>true</background>
       <instanceCount>-1</instanceCount>
