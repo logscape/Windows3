@@ -1,4 +1,4 @@
-<Bundle name="WindowsApp" version="1.5" system="false">
+<Bundle name="WindowsApp" version="1.6" system="false">
   <status>UNINSTALLED</status>
   <owner>info@logscape.com</owner>
   <services>
@@ -141,6 +141,16 @@
       <instanceCount>-1</instanceCount>
       <pauseSeconds>60</pauseSeconds>
       <script>networkUtil.vbs</script>
+    </Service>
+
+    <Service>
+      <name>Win_Service</name>
+      <resourceSelection>osName contains WINDOWS AND osName notContainsAny '2003,XP'</resourceSelection>
+      <fork>false</fork>
+      <background>true</background>
+      <instanceCount>-1</instanceCount>
+      <pauseSeconds>600</pauseSeconds>
+      <script>services.vbs</script>
     </Service>
 
     <Service>
